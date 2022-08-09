@@ -1,0 +1,160 @@
+{% extends 'SoporteHAWebapp/base.html' %}
+{% load  static %} 
+
+{% block contenidopagina %}
+
+{%for msg in messages%}
+<div class="alert alert-success" role="alert" style="max-width: 350px; text-align: center; margin-left: auto; margin-right: auto;">
+    {{msg}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{%endfor%}
+
+<header class="bg-dark py-5">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center justify-content-center">
+            <div class="col-lg-8 col-xl-7 col-xxl-6">
+                <div class="my-5 text-center text-xl-start">
+                    <h1 class="display-5 fw-bolder text-white mb-2">CAPACITACION EN MESA DE AYUDA</h1>
+
+                    <p class="lead fw-normal text-white-50 mb-4">Pagina Interna de MDA para el soporte del cliente Hospital Aleman
+                    En esta pagina intentare recopilar toda la info sacada de nuestros tecnicos de mesa de ayuda para dejar un registro mas claro y accesible.
+                    Les pido que cualquier error en la pagina me lo reporten, para poder intentar solucionarlo.</p>
+                    
+
+                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                        <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#features">Proximo</a>
+                        <a class="btn btn-outline-light btn-lg px-4" href="#!">Proximo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="{% static 'img/mesa.png' %}" class="img-fluid" alt="Imagen de mda" alt="..." /></div>
+        </div>
+    </div>
+</header>
+
+<section class="py-8">
+    <div class="container px-5 my-5 ">
+        <div class="text-center mb-5">
+            <h1 class="fw-bolder">Herramientas Principales</h1>
+            <p class="lead fw-normal text-muted mb-0">Hospital Aleman</p>
+        </div>
+        <div class="row gx-5 ">
+            <div class="col-lg-2">
+                <div class="position-relative mb-5">
+                    <img class="img-fluid rounded-3 mb-3" src= "{% static 'img/jira-logo2.png' %}" alt="imagen Jira" />
+                    <a class="h3 fw-bolder text-decoration-none link-dark stretched-link" href= https://hospitalaleman.atlassian.net/jira/your-work
+                    target=_blank>Jira:</a>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="position-relative mb-5">
+                    <img class="img-fluid rounded-3 mb-3" src="{% static 'img/Hospital-aleman.png' %}" alt="imagen Intranet"/>
+                    <a class="h3 fw-bolder text-decoration-none link-dark stretched-link" href= https://haleman.sharepoint.com/Gerencia-Sistemas/Documentos/Forms/AllItemsArbol.aspx?OR=Teams%2DHL&CT=1645442516594&params=%7B%22AppName%22%3A%22Teams%2DDesktop%22%2C%22AppVersion%22%3A%2227%2F22010300409%22%7D&id=%2FGerencia%2DSistemas%2FDocumentos%2FSoporte%20y%20Mesa%20de%20Ayuda%2FYEL%20%2D%20MDA&viewid=6d5ce662%2D174a%2D4e49%2D90de%2Db60969334dd4
+                    target=_blank>Intranet</a>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="position-relative mb-5 mb-lg-0">
+                    <img class="img-fluid rounded-3 mb-3" src="{% static 'img/Outlook.png' %}" alt="imagen correo" />
+                    <a class="h3 fw-bolder text-decoration-none link-dark stretched-link" href="https://outlook.office.com/mail/
+                    target=_blank">Correo</a>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="position-relative ">
+                    <img class="img-fluid rounded-3 mb-3" src="{% static 'img/teams.png' %}" alt="imagen teams" />
+                    <a class="h3 fw-bolder text-decoration-none link-dark stretched-link" href=https://teams.microsoft.com
+                    target=_blank>Microsoft Teams</a>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="position-relative mb-5">
+                    <img class="img-fluid rounded-3 mb-3" src="{% static 'img/Hospital-aleman.png' %}" alt="imagen Intranet"/>
+                    <a class="h3 fw-bolder text-decoration-none link-dark stretched-link" href="{% url 'sector' %}">Sectores</a>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="position-relative mb-5">
+                    <img class="img-fluid rounded-3 mb-3" src="{% static 'img/Hospital-aleman.png' %}" alt="imagen Intranet"/>
+                    <a class="h3 fw-bolder text-decoration-none link-dark stretched-link" href="#!">Proximo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="py-5 bg-light">
+        <div class="container px-5 my-5">
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-10 col-xl-7">
+                    <div class="text-center">
+                        <div class="fs-4 mb-4 fst-italic">
+                            <h3>Saludo inicial:</h3><hr>
+                            <p>El saludo inicial debe contener:</p>
+                            
+                                <li>"Buenos dias/tarde,mesa de ayuda, mi nombre es "tu nombre".</li>
+                                <li>Cuidar el tono de voz.</li>
+                                <li>Hablar claro.</li>
+                                <li>Una escucha activa, y toma notas.</li>
+                                <li>Mostrarte alegre, y seguro de lo que dices.</li>
+                            
+                        </div>
+
+                        <div class="d-flex align-items-center justify-content-center">
+                            <img class="rounded-circle me-3" src="https://dummyimage.com/40x40/ced4da/6c757d" alt="..." />
+                            <div class="fw-bold">
+                                MDA
+                                <span class="fw-bold text-primary mx-1">/</span>
+                                Puntos clave
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+
+    <div class="py-5 bg-light">
+        <div class="container px-5 my-5">
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-10 col-xl-7">
+                    <div class="text-center">
+                        <div class="fs-4 mb-4 fst-italic">
+                            <h3>Flow de carga de casos:</h3><hr><br />
+                            
+                            <div class="d-flex align-items-center justify-content-center">
+                                <img src="{% static 'img/Flow.jpg' %}">
+                            </div>
+                            
+                            <p>Definimos la manera de tomar una carga de un caso.</p><br />
+                            
+                                <li>Identificamos la problematica</li>
+                                <hr>
+                                <li>Una vez identificada, decidimos si se puede solucionar en linea, en el caso de no poder solucionar se deriva el problema a un soporte mas elevado, o a otro sector como pueden ser,"Informatica Medica", "Matenimiento", en estos casos particulares, se debe informar, al usuario que debe reportarlo al sector que corresponda.</li>
+                                <hr>
+                                <li>Una vez resuelto el punto anterior, se va crear un <strong>tkt</strong>, por resuelto si, o derivación al sector que corresponda.</li>
+                                <hr>
+                                <li>Por ultimo, si este <strong>tkt</strong>, es devuelto por el sector, puede estar de dos maneras, <FONT COLOR="red">Devuelto por falta de datos, o sector equivocado</FONT>, <FONT COLOR="green">Resuelto</FONT></li>
+                                <hr>
+                                <li>Dependiendo del resueltado, se buscara la solucion nuevamente al <strong>tkt</strong></li>
+                            
+                            
+                        </div>
+
+                        <div class="d-flex align-items-center justify-content-center">
+                            <img class="rounded-circle me-3" src="https://dummyimage.com/40x40/ced4da/6c757d" alt="..." />
+                            <div class="fw-bold">
+                                MDA
+                                <span class="fw-bold text-primary mx-1">/</span>
+                                Puntos clave
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

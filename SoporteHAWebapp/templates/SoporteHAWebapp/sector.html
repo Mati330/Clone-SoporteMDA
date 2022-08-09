@@ -1,0 +1,18 @@
+{% extends 'SoporteHAWebapp/base.html' %}
+{% load  static %} 
+
+
+{% block contenidopagina %}
+
+<div class="row row-cols-1 row-cols-md-3 g-2">
+    {%for publicacion in sector%}                    
+    <div class="card" style="width: 20rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{publicacion.titulo}}</h5>
+          <p class="card-text">{{publicacion.descripcion|safe}}</p>
+        </div>
+      </div>
+{%endfor%}
+</div> 
+
+{%endblock%}

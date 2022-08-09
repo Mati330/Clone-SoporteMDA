@@ -1,0 +1,32 @@
+{% extends 'SoporteHAWebapp/base.html' %}
+
+{% load  static %} 
+
+{% block contenidopagina %}
+
+{% for problematicas_ver in problematicas_ver %}
+
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">
+
+            <li>{{ problematicas_ver.nombre_uno }}</li>
+
+          </h5>
+          <p class="card-text">
+            <li>{{ problematicas_ver.nombre_dos }}</li>
+            <li>{{ problematicas_ver.area }}</li>
+            <li>{{ problematicas_ver.problematicas }}</li>
+          </p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+    </div>
+</div>
+{%endfor%}
+{% endblock %}

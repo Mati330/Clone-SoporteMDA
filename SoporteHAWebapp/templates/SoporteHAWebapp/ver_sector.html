@@ -1,0 +1,19 @@
+{% extends 'SoporteHAWebapp/base.html' %}
+{% load  static %} 
+
+{% block contenidopagina %}
+
+<section class="py-5">
+    <div class="container px-5 my-5">
+        <div class="row gx-5 align-items-center">
+            <div class="col-lg-6">
+                <h2 class="fw-bolder">{{ sector.titulo }}</h2>
+                <h6>Fecha: <i>{{sector.fecha}}</i> | Creado por: <i>{{sector.autor}}</i></h6>
+                <br>
+                <p class="lead fw-normal text-muted mb-0">{{ sector.descripcion|safe }}</p>
+            </div>                
+        </div>
+    </div>
+</section>  
+
+{% endblock %}

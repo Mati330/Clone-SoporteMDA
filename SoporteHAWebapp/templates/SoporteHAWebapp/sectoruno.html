@@ -1,0 +1,165 @@
+{% extends 'SoporteHAWebapp/base.html' %}
+{% load  static %} 
+
+{% block contenidopagina %}
+
+<div class="table-responsive table align-middle">
+<table class="table table-dark table-striped-columns">
+    <caption>MESA DE AYUDA V0.1</caption>
+    <thead>
+        <tr> <!--para las filas -->
+            <th>RESPONSABLE</th>
+            <th>INCIDENTES</th> <!-- Para el encabezado -->
+            <th>EJEMPLOS</th>
+            <th>GRUPO DE RESOLUCION EN JIRA</th>
+            <th>DIAS DE SOPORTE</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Leonardo Alarcon</td>    <!-- Para las celdas  -->
+        <td>Impresoras</td>
+        <td>Atasco de papel, conexion, tonner, impresora SATO de etiquetas</td>
+        <td>Mesa de ayuda y soporte tecnico / impresoras</td>
+        <td>LUNES Y VIERNES</td>
+    </tr>
+    <tr>
+        <td>Mario Sciarreta</td>    <!-- Para las celdas  -->
+        <td>Impresoras</td>
+        <td>Atasco de papel, conexion, tonner, impresora SATO de etiquetas</td>
+        <td>Mesa de ayuda y soporte tecnico / impresoras</td>
+        <td>MARTES, MIERCOLES Y JUEVES</td>
+    </tr>
+    <tr>
+        <td>Matias Pablo Garin</td>    <!-- Para las celdas  -->
+        <td>SW de base</td>
+        <td>Permisos Jira, Internet, Sharepoint, Altas/bajas usuarios - mails - buzones - Licencias 365</td>
+        <td>Infraestructura - SW de Base
+            (Entorno Web - Tecnologías nuevas / SW de terceros)</td>
+    </tr>
+    <tr>
+        <td>Leonardo Raurell</td>    <!-- Para las celdas  -->
+        <td>SW de Base</td>
+        <td>Permisos Jira, Internet, Sharepoint, Altas/bajas usuarios - mails - buzones - Licencias 365 - Permisos Internet</td>
+        <td>Infraestructura - SW de Base
+            (Entorno Web - Tecnologías nuevas / SW de terceros)</td>
+    </tr>
+    <tr>
+        <td>Julie Muset</td>    <!-- Para las celdas  -->
+        <td>SW de Base</td>
+        <td>Altas AD por ingresos</td>
+        <td>Infraestructura - SW de Base - Tema de Windows</td>
+    </tr>
+    <tr>
+        <td>Vigil, Diego Federico</td>    <!-- Para las celdas  -->
+        <td>SW de Base</td>
+        <td>Permisos VPN</td>
+        <td>Infraestructura - Redes y Telefonía / Redes</td>
+    </tr>
+    <tr>
+        <td>Bartolomeo, Gustavo Hernán</td>    <!-- Para las celdas  -->
+        <td>Redes/Telefonía</td>
+        <td>Puertos y conexiones de RED, Habilitar puertos,Permisos tecnovoz, derivacion de internos, permisos ring simultaneo,No funciona tel fijo, tel roto, sin tono</td>
+        <td>Infraestructura - Redes y Telefonía / Redes/ Telefonía</td>
+    </tr>
+    <tr>
+        <td>Gaston Briguera</td>    <!-- Para las celdas  -->
+        <td>Telefonía</td>
+        <td>No funciona tel fijo, tel roto, sin tono</td>
+        <td>Infraestructura - Redes y Telefonía / Telefonía</td>
+    </tr>
+    <tr>
+        <td>Franco Leo Bangert</td>    <!-- Para las celdas  -->
+        <td>Redes</td>
+        <td>Puertos y conexiones de RED, Habilitar puertos, Tarjeta de coordenadas</td>
+        <td>Infraestructura - Redes y Telefonía / Redes</td>
+    </tr>
+    <tr>
+        <td>Carbone, Esteban Javier</td>    <!-- Para las celdas  -->
+        <td>Seguridad informática</td>
+        <td>Fishing, spam, correos extraños, alertas de antivirus</td>
+        <td>Seguridad de la Información</td>
+    </tr>
+    <tr>
+        <td>Pablo Pascazzi</td>    <!-- Para las celdas  -->
+        <td>Analista Business Intelligence</td>
+        <td>Acceso RC Microstrategy, se cierra Jira y se informa al usuario que lo vea con Pablo.</td>
+        <td>Se cierra como Mesa de Ayuda.</td>
+    </tr>
+    <tr>
+        <td>Saraceni, Marcos German</td>    <!-- Para las celdas  -->
+        <td>DBA</td>
+        <td>Altas usuarios Forms, Alta HCOP, permisos para el sistema en forms, permisos oracle, igualar permisos forms/oracle, Hs. Extra, MENU_Perfiles, MENU DBA</td>
+        <td>DBA</td>
+    </tr>
+    <tr>
+        <td>Montenegro, Juan Carlos</td>    <!-- Para las celdas  -->
+        <td>Desarrollo</td>
+        <td>Admision; Sistemaforms; HAIDFX //Consultron Farmacia</td>
+        <td>Desarrollo - Admisión / Transplante / Mkt / Farmacia / Haidfx //Desarrollo - Análisis Funciona / Informes / Consultron </td>
+    </tr>
+    <tr>
+        <td>Buccino, Mariano</td>    <!-- Para las celdas  -->
+        <td>Desarrollo</td>
+        <td>FORMS/ADMITODO</td>
+        <td>Desarrollo - Turnos / Listas de Trabajo / ACMEs</td>
+    </tr>
+    <tr>
+        <td>Walter Rodriguez</td>    <!-- Para las celdas  -->
+        <td>Desarrollo</td>
+        <td>Igualar permisos Haidfix</td>
+        <td>Desarrollo - Admisión / Transplante / Mkt / Farmacia / Haidfx</td>
+    </tr>
+    <tr>
+        <td>De Rosa, Luciano Andrés</td>    <!-- Para las celdas  -->
+        <td>Desarrollo</td>
+        <td>Equipo Digital; portal pacientes, Totems/Terminales de autogestion/Acceso a Super Usuario PM</td>
+        <td>Desarrollo - Equipo Digital</td>
+    </tr>
+    <tr>
+        <td>Waicen, Dario Alejandro</td>    <!-- Para las celdas  -->
+        <td>Desarrollo</td>
+        <td>Facturación / COBERT</td>
+        <td>Desarrollo - Facturación / Marketing y Otros</td>
+    </tr>
+    <tr>
+        <td>Gonzalez, Alejandro Nicolas</td>    <!-- Para las celdas  -->
+        <td>Desarrollo</td>
+        <td>HCOP: Historia clínica, recetas, estudios, etc / TRIAGE</td>
+        <td>Desarrollo - HCOP / HCI / HA Scan / Viewer / Hs. Extra</td>
+    </tr>
+    <tr>
+        <td>Mendez, Pablo Nicolás</td>    <!-- Para las celdas  -->
+        <td>Desarrollo</td>
+        <td>errores de fors relacionados a Plan medico, ENGAGE</td>
+        <td>Desarrollo - Plan Médico HA</td>
+    </tr>
+    <tr>
+        <td>Ford, Jorge Juan</td>    <!-- Para las celdas  -->
+        <td>Desarrollo</td>
+        <td>Turnos, listas de trabajo, Forms/Ruta: HORARIOS_GRILLA_AREA</td>
+        <td>Desarrollo - Turnos / Listas de Trabajo / ACMEs</td>
+    </tr>
+    <tr>
+        <td>Kohen, Moises Ariel</td>    <!-- Para las celdas  -->
+        <td>Desarrollo</td>
+        <td>Agendas Medicas</td>
+        <td>Desarrollo - Turnos / Listas de Trabajo / ACMEs</td>
+    </tr>
+    <tr>
+        <td>Gonzalez, Alejandro Nicolas-Montenegro, Juan Carlos</td>    <!-- Para las celdas  -->
+        <td>Desarrollo</td>
+        <td>Análisis funcional, Consultron (consulta base de pacientes)</td>
+        <td>Desarrollo - Análisis Funcional / Informes / Consultron</td>
+    </tr>
+    <tr>
+        <td>Casamassima, Santiago</td>    <!-- Para las celdas  -->
+        <td>Soporte On Site</td>
+        <td>Fallas; PC/Monitor/Note; no enciende, dañado, roto, windows no inicia, sin internet, sin red, ordenar cableado, cables de red,Pedidos de PC/Notebook/Perifericos,varios</td>
+        <td>Infraestructura - Redes y Telefonía / Redes</td>
+    </tr>    
+    </tbody>
+</table>
+<div>
+
+{% endblock %}

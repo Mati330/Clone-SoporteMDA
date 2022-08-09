@@ -1,0 +1,26 @@
+{% extends 'SoporteHAWebapp/base.html' %}
+{% load  static %} 
+
+{% block contenidopagina %}
+
+
+<form class="d-flex" action="" method="POST">
+    {% csrf_token %}
+    <input class="form-control me-2" type="text" name="search" id="">
+    <button class="btn btn-outline-success" type="submit">Buscar</button>
+</form>
+
+
+<ul>
+    Resultado blog:
+    {% for resultado in resultado %}
+        <li>
+            {{ resultado.titulo  }}, [{{ resultado.descripcion|safe  }}   ]       
+        </li>
+    {% endfor %}
+        
+</ul>
+
+
+{% endblock %}
+

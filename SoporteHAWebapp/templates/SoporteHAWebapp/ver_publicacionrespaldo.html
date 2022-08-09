@@ -1,0 +1,38 @@
+{% extends 'SoporteHAWebapp/base.html' %}
+{% load  static %} 
+
+{% block contenidopagina %}
+
+<section class="py-5">
+    <div class="container px-5 my-5">
+        <div class="row gx-5 align-items-center">
+            <div class="col-lg-6 order-first order-lg-last"><img class="img-fluid rounded mb-5 mb-lg-0" src="{{publicaciones.imagenone.url}}" alt="..."/></div>
+            <div class="col-lg-6 order-first order-lg-last"><img class="img-fluid rounded mb-5 mb-lg-0" src="{{publicaciones.imagentwo.url}}" alt="..."/></div>
+            <div class="col-lg-6 order-first order-lg-last"><img class="img-fluid rounded mb-5 mb-lg-0" src="{{publicaciones.imagenthree.url}}" alt="..."/></div>
+            <div class="col-lg-6">
+                <h3 class="fw-bolder">{{ publicaciones.pais }}</h3>
+                <h2 class="fw-bolder">{{ publicaciones.titulo }}</h2>
+                <h6>Fecha: <i>{{publicaciones.fecha_viaje}}</i> | Creado por: <i>{{publicaciones.autor}}</i></h6>
+                <br>
+                <p class="lead fw-normal text-muted mb-0">{{ publicaciones.descripcion|safe }}</p>
+            </div>                
+        </div>
+        {%if user.is_authenticated%}
+            {%if user.get_username|slugify == publicaciones.autor|slugify %}
+            <form action="#!" method="POST">
+                {% csrf_token %} 
+                <button type="submit" name="publicacion_id" value="{{publicacion.id}}" class="btn btn-primary bi bi-heart disabled"></button> - {{total_likes}} Me Gusta
+            </form>
+            {%else%}           
+            <form action="{#!}" method="POST">
+                {% csrf_token %} 
+                <button type="submit" name="publicacion_id" value="{{publicacion.id}}" class="btn btn-primary bi bi-heart"></button> - {{total_likes}} Me Gusta
+            </form>
+            {%endif%}
+        {%else%}
+        {{total_likes}} - Me Gusta
+        {%endif%}
+    </div>
+</section>  
+
+{% endblock %}
