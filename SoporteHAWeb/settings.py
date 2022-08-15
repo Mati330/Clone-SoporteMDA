@@ -121,7 +121,7 @@ DATABASES['default'].update(db_from_env)
 STATICFILES_DIRS = (  os.path.join(BASE_DIR, 'static'),)
 
 import django_heroku
-django_heroku.settigns(locals(), staticfiles=False)
+django_heroku.settings(locals(), staticfiles=False)
 
 
 
