@@ -11,12 +11,9 @@
 
 <div class="row gx-5"> 
     {%for publicacion in blogg%}
-        
-                    <div>{{publicacion.titulo}}</div><a href="{% url 'ver_publicacion' publicacion.id %}">Ver</a>                  
-                    </div>
-                </div>                                
-            </div>
-        </div>
+      
+        <a{{publicacion.titulo}} href="{% url 'ver_publicacion' publicacion.id %}">Ver</a>                  
+
     {%endfor%}                            
 </div>
 {%endblock%}
