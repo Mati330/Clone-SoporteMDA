@@ -28,6 +28,7 @@ SECRET_KEY = 'django-insecure-ydckh*zsoh48ymj9(_7*0#vpw&rz&*=n9&%&59v=34h6_v#d@k
 AWS_ACCESS_KEY_ID = 'AKIAST3ZVBCL3Q57S7FN'
 AWS_SECRET_ACCESS_KEY = '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'
 AWS_STORAGE_BUCKET_NAME = 'segundobucketmda'
+AWS_URL= 'https://segundobucketmda.s3.amazonaws.com/'
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 AWS_S3_OBJECT_PARAMETERS = {
     'CacheControl': 'max-age=86400',
@@ -118,6 +119,9 @@ db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
 STATICFILES_DIRS = (  os.path.join(BASE_DIR, 'static'),)
+
+import django_heroku
+django_heroku.settigns(locals(), staticfiles=False)
 
 
 
