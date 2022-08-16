@@ -11,7 +11,7 @@
 
 {%for publicacion in blogg%}
     <ul>
-        <a class="btn btn-primary" href="https://www.freecodecamp.org/">{{publicacion.titulo}}</a>
+        <a class="btn btn-primary" href={{publicacion.titulo}}">{{publicacion.titulo}}</a>
     </ul>                
 {%endfor%}     
 </div>
