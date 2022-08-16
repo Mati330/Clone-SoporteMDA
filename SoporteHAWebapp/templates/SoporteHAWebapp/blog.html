@@ -12,8 +12,9 @@
 
 <div class="row gx-5"> 
     {%for publicacion in blogg%}
-        <div>{{publicacion.titulo}}</div>           
-    {%endfor%}     
+        <div class="badge bg-primary bg-gradient rounded-pill mb-2">{{publicacion.titulo}}</div>     
+        <a class="btn btn-info btn-lg px-2 me-sm2" href="{% url 'ver_publicacion' publicacion.id %}" style="text-align: center; color: white;">Ver</a>      
+{%endfor%}     
 </div>
 
 {%endblock%}
