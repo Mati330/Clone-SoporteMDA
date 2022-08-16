@@ -12,11 +12,25 @@
 
 <div class="row gx-5"> 
     {%for publicacion in blogg%}
-        <div class="badge bg-primary bg-gradient rounded-pill mb-2">{{publicacion.titulo}}</div>     
-        <a class="btn btn-info btn-lg px-2 me-sm2" href="{% url 'ver_publicacion' publicacion.id %}" style="text-align: center; color: white;">Ver</a>      
+    <div class="container">
+        <div class="items">
+        <div class="row">
+                <div class="col-sm-4">
+                    <div class="item shadow mb-4">
+                        <h3 class="title">{{publicacion.titulo}}</h3>
+                        <img class="item-image" src="{{publicacion.imagenone.url}}" alt="..." style="max-width: 300px; max-height: 300px; height: auto; width: auto; align-self: center;">
+                        <div class="item-details">
+                            <h4 class="price">Creado por:<i>{{publicacion.autor}}</i></h4>
+                            <h4 class="price"><i>{{publicacion.fecha}}</i></h4>
+                            <button class="item-button btn btn-primary addToCart" href="{% url 'ver_publicacion' publicacion.id %}" style="text-align: center; color: white;">Ver</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>   
 {%endfor%}     
 </div>
 
 {%endblock%}
-
 
