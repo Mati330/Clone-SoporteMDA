@@ -25,9 +25,9 @@ STATIC_URL = '/static/'
 SECRET_KEY = 'django-insecure-ydckh*zsoh48ymj9(_7*0#vpw&rz&*=n9&%&59v=34h6_v#d@k'
 
 # AWS S3 SETTINGS
-AWS_ACCESS_KEY_ID = 'AKIAST3ZVBCL6V2JWNPM'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_STORAGE_BUCKET_NAME = 'segundobucketmda'
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
 AWS_URL= 'https://segundobucketmda.s3.amazonaws.com/'
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 AWS_S3_OBJECT_PARAMETERS = {
