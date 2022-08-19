@@ -26,7 +26,7 @@ STATIC_URL = '/static/'
 
 
 # UPDATE secret key
-SECRET_KEY = config('SECRET_KEY') # Instead of your actual secret key
+SECRET_KEY='django-insecure-ydckh*zsoh48ymj9(_7*0#vpw&rz&*=n9&%&59v=34h6_v#d@k' # Instead of your actual secret key
 
 # AWS S3 SETTINGS
 AWS_ACCESS_KEY_ID =config('AWS_ACCESS_KEY_ID')
