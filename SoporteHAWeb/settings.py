@@ -45,7 +45,7 @@ MEDIAFILES_LOCATION = 'media'
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG=True
+DEBUG=False
 
 #ALLOWED_HOSTS = ['testserver',]
 #ALLOWED_HOSTS = ['*']
