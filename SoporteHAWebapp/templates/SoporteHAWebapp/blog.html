@@ -3,7 +3,7 @@
 
 {% block contenidopagina %}
 <br>
-<h1 style="text-align: center;"><b>Publicaciones</b></h1>
+<h1 style="text-align: center;"><b>Instructivos - Templates</b></h1>
 <br>
 <hr style="width: 25%; margin: auto;">
 <br>
@@ -13,14 +13,11 @@
     {%for publicacion in blogg%}
     <div class="col-lg-3 mb-5">
         <div class="card h-100 shadow border-0">
-            <img class="card-img-top" src="{{publicacion.imagenone.url}}" alt="..." style="max-width: 300px; max-height: 300px; height: auto; width: auto; align-self: center;"/>
             <div class="card-body p-4">
                 <div class="badge bg-primary bg-gradient rounded-pill mb-2">{{publicacion.autor}}</div>
                 <h5 class="card-title mb-3">{{publicacion.titulo}}</h5></a>
-                <p class="card-text mb-0">{{publicacion.descripcion|slice:160|safe}}...</p>
-                <br>                
                 <br>
-                <a class="btn btn-outline-info btn-lg px-2 me-sm2" href="{% url 'ver_publicacion' publicacion.id %}" style="text-align: center;">Ver</a>                                                                      
+                <a class="btn btn-dark" href="{% url 'ver_publicacion' publicacion.id %}" style="text-align: center;">Ver</a>                                                                      
             </div>                                
         </div>
     </div>
