@@ -27,16 +27,15 @@
                                 {%if user.is_authenticated %}
 
                                 <li class="nav-item"><a class="nav-link" href="{% url 'inicio' %}">Inicio</a></li>
-                                <li class="nav-item"><a class="nav-link" href="{% url 'crear_publicacion' %}">Crear Instructivo</a></li>
-                                <li class="nav-item"><a class="nav-link" href="{% url 'blog-usuario' %}">Ver Instructivos</a></li>
-                                <li class="nav-item"><a class="nav-link" href="{% url 'buscarblog' %}">Buscador</a></li>
                                 <li class="nav-item"><a class="nav-link" href=https://haleman.sharepoint.com/Gerencia-Sistemas/Documentos/Forms/AllItemsArbol.aspx?OR=Teams%2DHL&CT=1645442516594&params=%7B%22AppName%22%3A%22Teams%2DDesktop%22%2C%22AppVersion%22%3A%2227%2F22010300409%22%7D&id=%2FGerencia%2DSistemas%2FDocumentos%2FSoporte%20y%20Mesa%20de%20Ayuda%2FYEL%20%2D%20MDA&viewid=6d5ce662%2D174a%2D4e49%2D90de%2Db60969334dd4
                                     target=_blank>Documentos</a></li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">nomires</a>
+                                    <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Instructivos</a>
                                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
-                                        <li><a class="dropdown-item" href="blog-home.html">nomires</a></li>
-                                        <li><a class="dropdown-item" href="blog-post.html">tedije</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'crear_publicacion' %}">Crear Instructivo</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'blog-usuario' %}">Instructivos</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'mis_publicaciones_blog' %}">Mis Instructivos</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'buscarblog' %}">Buscador</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown">

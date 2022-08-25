@@ -117,6 +117,12 @@ def crear_publicacion(request):
     return render(request, 'SoporteHAWebapp/crearpublicacion.html', {'publicacion':publicacion})
 
 @login_required
+def mis_publicaciones_blog(request):
+    publicaciones = Publicaciones.objects.filter(autor=request.user).order_by('-id')        
+
+    return render(request, "SoporteHAWebapp/mis_publicaciones_blog.html", {"publicaciones":publicaciones})
+
+@login_required
 def blog(request):
     
     blogg = Publicaciones.objects.all

@@ -37,6 +37,7 @@ urlpatterns = [
     path('buscarblog/', buscarblog, name= 'buscarblog'),
     path('publicaciones/<pk>', ver_publicacion.as_view(), name='ver_publicacion'),
     path('eliminar_publicacion/<publicacion_id>', eliminar_publicacion, name='eliminar_publicacion'),
+    path('mis_publicaciones_blog', mis_publicaciones_blog, name='mis_publicaciones_blog'),
     
     
     
